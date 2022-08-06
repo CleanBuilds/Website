@@ -30,18 +30,20 @@ const Cart = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // "Authorization": `Bearer ${process.env.NEXT_PUBLIC_STRIPE_SECRET}`,
       },
-      body: JSON.stringify(cartItems),
+      body: JSON.stringify(cartItems)
     });
 
     if (response.statusCode === 500) return;
 
     const data = await response.json();
+  
 
     toast.loading("Redirecting...");
+    //add shipping address to stripe
+    
 
-    stripe.redirectToCheckout({ sessionId: data.id });
+    stripe.redirectToCheckout({ sessionId: data.id});
   }
 
   return (
