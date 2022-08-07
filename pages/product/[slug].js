@@ -10,12 +10,13 @@ import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 
-const ProductDetails = ({ product, products }) => {
+const ProductDetails = ({ product, products,reviews }) => 
+{
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const unorderedDetails = details.split(",");
-
+  console.log(reviews);
   const handleBuyNow = () => {
     onAdd(product, qty);
 
@@ -109,14 +110,14 @@ const ProductDetails = ({ product, products }) => {
 };
 
 export const getStaticPaths = async () => {
-  const query = `*[_type == "product"] {
+  const productQuery = `*[_type == "product"] {
     slug {
       current
     }
   }
   `;
 
-  const products = await client.fetch(query);
+  const products = await client.fetch(productQuery);
 
   const paths = products.map((product) => ({
     params: {
@@ -135,9 +136,11 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const productsQuery = '*[_type == "product"]';
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
+  const reviewQuery = `*[_type == "review" && references('${product._id}')]`;
+  const reviews = await client.fetch(reviewQuery);
 
   return {
-    props: { products, product },
+    props: { products, product, reviews },
   };
   
 };
