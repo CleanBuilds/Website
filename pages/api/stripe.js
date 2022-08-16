@@ -14,7 +14,8 @@ export default async function handler(req, res) {
         shipping_address_collection: {
           allowed_countries: ["US"],
         },
-        line_items: req.body.map((item) => {
+        line_items: req.body.map((item) => 
+        {
           const img = item.image[0].asset._ref;
           const newImage = img
             .replace(
@@ -31,6 +32,7 @@ export default async function handler(req, res) {
                 images: [newImage],
               },
               unit_amount: item.price * 100,
+              tax_behavior: "exclusive",
             },
             adjustable_quantity: {
               enabled: true,
@@ -40,7 +42,8 @@ export default async function handler(req, res) {
           };
         }),
         success_url: `${req.headers.origin}/success`,
-        cancel_url: `${req.headers.origin}/canceled`,
+        cancel_url: `${req.headers.origin}/`,
+        automatic_tax: {enabled: true},
       };
 
       // Create Checkout Sessions from body params.
