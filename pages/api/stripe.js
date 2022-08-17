@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         mode: "payment",
         payment_method_types: ["card"],
         billing_address_collection: "auto",
-        shipping_options: [{ shipping_rate: "shr_1LSoXjDxI9M0xlPQlWvadIUM" }],
+        shipping_options: [{ shipping_rate: process.env.NEXT_PUBLIC_STRIPE_SHIPPING_KEY }],
         shipping_address_collection: {
           allowed_countries: ["US"],
         },
