@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Logo from '../public/PhotoShopped.png'
+import Logo from "../public/PhotoShopped.png";
 
 const About = () => {
   return (
     <div className="about-wrapper">
       <div className="about">
-        <h2 className="logo"> <img
-                  src={Logo.src}
-                  className="cart-product-image"
-               
-                /></h2>
+        <h2 className="logo">
+          {" "}
+          <img src={Logo.src} className="FrontPageImage" />
+        </h2>
         <p className="description">
           This is a startup company with goals of bringing high quality desktop
           computers to market. Our goal is to not cut corners, allowing our
@@ -18,7 +17,7 @@ const About = () => {
           one of the first to market with the new generation of desktop
           computers said to release end of Q4
         </p>
-        <Link href="/">
+        <Link href="/store">
           <button type="button" width="300px" className="btn">
             Continue Shopping
           </button>
