@@ -749,3 +749,22 @@ span.text-red {
     margin: auto;
   }
 }
+/* center the about wrapper and align the contents to the center */
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* center h2 tag with classname logo */
+.about-wrapper h2 {
+ justify-content: "center";
+ text-align: "center";
+  font-size: 40px;
+  font-weight: 900;
+  color: #324d67;
+  margin-right: 100px;
+}
