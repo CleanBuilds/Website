@@ -768,3 +768,33 @@ span.text-red {
   color: #324d67;
   margin-right: 100px;
 }
+
+/* create a screen size for mobile devices */
+@media screen and (max-width: 912px) {
+  .about-wrapper {
+    margin-top: 50px;
+    
+  }
+  .about{
+    margin-top: 50px;
+    width:90%
+  }
+  .about-wrapper h2 {
+    font-size: 30px;
+  }
+.FrontPageImage{
+  width: 280px;
+  height:auto;
+  margin-top: -50px;
+}
+
+.description{
+  font-size: 16px;
+  font-weight: 50;
+  text-align: center;
+  margin: 10px;
+  margin-top: 30px;
+}
+  
+}
+
