@@ -11,11 +11,11 @@ const About = () => {
           <img src={Logo.src} className="FrontPageImage" />
         </h2>
         <p className="description">
-          This is a startup company with goals of bringing high quality desktop
-          computers to market. Our goal is to not cut corners, allowing our
-          computers to be both clean in design and performance.The goal is to be
-          one of the first to market with the new generation of desktop
-          computers said to release end of Q4
+          Build22 LLC has goals of bringing up to date hardware and software
+          solutions to the market, starting with high quality desktop computers.
+          With CleanBuilds, build22 wishes to be one of the first to consumer
+          market with the new generation of desktop computer components said to
+          release end of 2022
         </p>
         <Link href="/store">
           <button type="button" width="300px" className="btn">

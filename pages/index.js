@@ -11,12 +11,15 @@ const Welcome = () => {
           <img src={Logo.src} className="FrontPageImage" />
         </h2>
         <p className="description">
-          This is a startup company with goals of bringing high quality desktop
-          computers to market. Our goal is to not cut corners, allowing our
-          computers to be both clean in design and performance.The goal is to be
-          one of the first to market with the new generation of desktop
-          computers said to release end of Q4. So when everybody is getting that
-          new computer, you'll know where to come.
+          CleanBuilds brings high-end desktop computing right to your home. Our
+          standard for computer design and performance is one to raise the bar
+          for everyday consumers. We believe your workstation is important, and
+          do our best to deliver the best quality product to our customers. Our
+          small team of experts assembles each computer individually in house,
+          and then ship the completed build ASAP. Build22LLC has goals to be one of the
+          first to market with the new generation of desktop computers said to
+          release end of Q4. If your looking to splurge on a new computer, look
+          no further.
         </p>
         <Link href="/store">
           <button type="button" width="300px" className="btn">
