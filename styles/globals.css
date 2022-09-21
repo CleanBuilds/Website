@@ -614,16 +614,16 @@ span.text-red {
  
 }
 
-.termsOfService-wrapper{
+.termsOfService-wrapper, .privacyPolicy{
   margin-top: 100px;
 }
 
-.termsOfService-wrapper li{
+.termsOfService-wrapper li, .privacyPolicy li{
   margin-top: 20px;
   margin-left: 5%;
 }
 
-.termsOfService-wrapper h1 h2{
+.termsOfService-wrapper h1 h2, privacyPolicy h1 h2{
   margin-bottom: 1000px;
 }
 

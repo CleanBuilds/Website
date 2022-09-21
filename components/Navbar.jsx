@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/store"><img
+        <Link href="/"><img
                   src={Logo.src}
                   className="cart-product-image"
                   height = "25px"
